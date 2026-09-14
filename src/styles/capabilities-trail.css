@@ -1,0 +1,13 @@
+.cap-trail{position:absolute!important;inset:0;z-index:20;pointer-events:none;overflow:hidden;transition:none!important}
+.cap-trail-point{position:absolute;width:18px;height:18px;transform:translate(-50%,-50%) rotate(45deg);border:1px solid currentColor;opacity:0;animation:cap-trail-fade .8s cubic-bezier(.2,.7,.2,1) forwards;will-change:transform,opacity}
+.cap-trail-point:before,.cap-trail-point:after{content:'';position:absolute;left:50%;top:50%;background:currentColor;opacity:.72}
+.cap-trail-point:before{width:22px;height:1px;transform:translate(-50%,-50%) rotate(-45deg)}
+.cap-trail-point:after{width:1px;height:22px;transform:translate(-50%,-50%) rotate(-45deg)}
+.cap-trail-point[data-kind="1"]{border-radius:50%;transform:translate(-50%,-50%) rotate(0) scale(.72)}
+.cap-trail-point[data-kind="1"]:before,.cap-trail-point[data-kind="1"]:after{transform:translate(-50%,-50%)}
+.cap-trail-point[data-kind="2"]{width:9px;height:9px;background:currentColor;border:0;transform:translate(-50%,-50%) rotate(45deg)}
+.cap-trail-point[data-kind="2"]:before,.cap-trail-point[data-kind="2"]:after{display:none}
+.cap-visual:hover .cap-scene-grid{filter:brightness(1.08)}
+@keyframes cap-trail-fade{0%{opacity:.78;scale:.55}28%{opacity:.68;scale:1}100%{opacity:0;scale:1.75}}
+@media(pointer:coarse){.cap-trail{display:none}}
+@media(prefers-reduced-motion:reduce){.cap-trail{display:none}}

@@ -6,5 +6,6 @@ import'./styles/global.css';
 import'./styles/shell.css';
 import'./styles/sections.css';
 import'./styles/refinements.css';
+import'./styles/capabilities-trail.css';
 
 createRoot(document.getElementById('root')!).render(<StrictMode><App/></StrictMode>);
