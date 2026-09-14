@@ -1,0 +1,4 @@
+@media(max-width:760px){
+  .final-cta a i{display:none}
+  .final-cta>a{grid-template-columns:1fr}
+}
