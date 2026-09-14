@@ -11,3 +11,8 @@ export const coverTransform=progress=>{
   const p=clamp01(progress);
   return {scale:1-.24*p,y:18*p,radius:28*p};
 };
+export const processScrollOffset=(index,count,travel)=>{
+  if(count<=1||travel<=0)return 0;
+  const safeIndex=Math.min(count-1,Math.max(0,index));
+  return (safeIndex/count)*travel;
+};
