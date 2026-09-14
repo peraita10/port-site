@@ -16,3 +16,7 @@ export const processScrollOffset=(index,count,travel)=>{
   const safeIndex=Math.min(count-1,Math.max(0,index));
   return (safeIndex/count)*travel;
 };
+export const appendTrailPoint=(points,point,limit=16)=>{
+  const size=Math.max(1,Math.floor(limit));
+  return [...points,point].slice(-size);
+};
