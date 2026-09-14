@@ -3,7 +3,7 @@
 Portfolio website presenting the original Port.site website offer, in English.
 
 ## Stack
-React + TypeScript + Vite frontend. Node.js HTTP backend serves the production build and the offer via GET /api/offer. No database is needed for this read-only presentation.
+React + TypeScript + Vite frontend. GitHub Pages serves the static production build. The offer is generated from server/offer.js into public/offer.json during each build. The optional Node.js HTTP backend also serves the production build and GET /api/offer. No database is needed for this read-only presentation.
 
 ## Run
 Requires Node.js 22 or newer.
@@ -34,3 +34,7 @@ Deploy to a Node-capable host using `npm ci && npm run build` and `npm start`. G
 ## Repository
 
 https://github.com/peraita10/port-site
+
+## GitHub Pages
+
+The Pages workflow builds and publishes main. Expected URL: https://peraita10.github.io/port-site/. If automatic enablement is denied, select Settings > Pages > Source > GitHub Actions and rerun the workflow.

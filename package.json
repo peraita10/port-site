@@ -1,1 +1,25 @@
-{"name":"port-site","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"tsc --noEmit && vite build","start":"node server/index.js","test":"node --test server/*.test.js"},"dependencies":{"react":"^19.1.0","react-dom":"^19.1.0"},"devDependencies":{"@types/react":"^19.1.0","@types/react-dom":"^19.1.0","typescript":"^5.8.0","vite":"^6.3.0"},"engines":{"node":">=22"}}
+{
+  "name": "port-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "node scripts/export-offer.js && tsc --noEmit && vite build",
+    "start": "node server/index.js",
+    "test": "node --test server/*.test.js"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.0",
+    "vite": "^6.3.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

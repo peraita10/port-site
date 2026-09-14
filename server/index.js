@@ -10,6 +10,7 @@ export const server=http.createServer(async(req,res)=>{
  res.setHeader('Referrer-Policy','strict-origin-when-cross-origin');
  if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{'Allow':'GET, HEAD'});return res.end();}
  let pathname;try{pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.writeHead(400);return res.end();}
+ if(pathname.startsWith('/port-site/'))pathname=pathname.slice('/port-site'.length);
  if(pathname==='/api/offer'||pathname==='/api/health'){
  res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-cache'});return res.end(req.method==='HEAD'?undefined:JSON.stringify(pathname==='/api/offer'?offer:{status:'ok'}));}
  if(pathname.startsWith('/api/')){res.writeHead(404);return res.end();}
