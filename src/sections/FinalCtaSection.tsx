@@ -1,0 +1,1 @@
+export default function FinalCtaSection(){return <section id="contact" className="final-cta"><p>HAVE SOMETHING TO SHOW?</p><a href="#cover"><span>LET'S PUT IT</span><strong>ONLINE.</strong><i aria-hidden="true">↗</i></a><div className="final-meta"><span>PORT.SITE</span><span>WEB DESIGN + DEVELOPMENT</span><span>2026</span></div></section>}
