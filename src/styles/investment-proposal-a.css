@@ -2,8 +2,6 @@
   margin-top:34px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  border-top:1px solid #aaa499;
-  border-bottom:1px solid #aaa499;
 }
 .investment-payment-item{
   min-height:150px;
@@ -37,7 +35,7 @@
   grid-template-columns:1fr 1fr;
   align-items:center;
   min-height:92px;
-  border-bottom:1px solid #aaa499;
+  border-top:1px solid #aaa499;
 }
 .investment-support-row p{
   margin:0;
@@ -45,7 +43,6 @@
   font-size:11px;
   letter-spacing:.12em;
 }
-.investment-support-row p:first-child{border-right:1px solid #aaa499}
 .investment-support-row p:last-child{text-align:right}
 .investment-support-row strong{font-weight:600}
 .investment-stage .investment-terms{margin-top:22px}
@@ -59,5 +56,5 @@
   .investment-payment-item p{font-size:11px}
   .investment-support-row{grid-template-columns:1fr}
   .investment-support-row p{padding:18px 0;text-align:left!important}
-  .investment-support-row p:first-child{border-right:0;border-bottom:1px solid #aaa499}
+  .investment-support-row p:first-child{border-bottom:1px solid #aaa499}
 }
