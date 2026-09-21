@@ -55,12 +55,14 @@
 .process-rail button b{display:block;font-size:12px;font-weight:400;margin-top:5px}
 .process-state-4 .process-rail button[data-active="true"]{color:white}
 
-.creative-cursor{position:fixed;left:0;top:0;z-index:9999;width:34px;height:34px;margin:-17px 0 0 -17px;pointer-events:none;opacity:0;transition:opacity .2s;will-change:transform}
-.creative-cursor span,.creative-cursor:before,.creative-cursor:after{content:'';position:absolute;left:50%;top:50%;background:#fff;mix-blend-mode:difference;transition:transform .2s,width .2s,height .2s}
-.creative-cursor span{width:7px;height:7px;margin:-3.5px;border:1px solid #fff;background:transparent;transform:rotate(45deg)}
+.creative-cursor{position:fixed;left:0;top:0;z-index:9999;width:34px;height:34px;margin:-17px 0 0 -17px;pointer-events:none;opacity:0;color:#fff;transition:opacity .2s,color .12s;will-change:transform}
+.creative-cursor[data-tone="dark"]{color:#11110f}
+.creative-cursor[data-tone="light"]{color:#fff}
+.creative-cursor span,.creative-cursor:before,.creative-cursor:after{content:'';position:absolute;left:50%;top:50%;background:currentColor;transition:transform .2s,width .2s,height .2s,background-color .12s}
+.creative-cursor span{width:7px;height:7px;margin:-3.5px;border:1px solid currentColor;background:transparent;transform:rotate(45deg)}
 .creative-cursor:before{width:24px;height:1px;transform:translate(-50%,-50%)}
 .creative-cursor:after{width:1px;height:24px;transform:translate(-50%,-50%)}
-.creative-cursor i{position:absolute;inset:3px;border:1px solid #fff;border-radius:50%;mix-blend-mode:difference;opacity:.35;transform:scale(.35);transition:transform .2s,opacity .2s}
+.creative-cursor i{position:absolute;inset:3px;border:1px solid currentColor;border-radius:50%;opacity:.35;transform:scale(.35);transition:transform .2s,opacity .2s,border-color .12s}
 .creative-cursor b{display:none}
 .creative-cursor[data-active="true"] span{transform:rotate(135deg) scale(1.65)}
 .creative-cursor[data-active="true"] i{transform:scale(1);opacity:.85}

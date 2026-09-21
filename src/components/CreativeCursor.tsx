@@ -1,4 +1,20 @@
 import{useEffect,useRef}from'react';
+import{cursorToneFromRgb}from'../interaction/math.js';
+
+const getBackgroundRgb=(element:Element|null)=>{
+ let current=element as HTMLElement|null;
+ while(current){
+  const value=getComputedStyle(current).backgroundColor;
+  const match=value.match(/rgba?\(([^)]+)\)/);
+  if(match){
+   const parts=match[1].split(',').map(part=>Number.parseFloat(part.trim()));
+   const alpha=parts.length>3?parts[3]:1;
+   if(alpha>.18)return{r:parts[0],g:parts[1],b:parts[2]};
+  }
+  current=current.parentElement;
+ }
+ return{r:242,g:240,b:234};
+};
 
 export default function CreativeCursor(){
  const ref=useRef<HTMLDivElement>(null);
@@ -8,8 +24,11 @@ export default function CreativeCursor(){
   document.body.classList.add('has-creative-cursor');
   const move=(event:PointerEvent)=>{
    cursor.style.transform=`translate3d(${event.clientX}px,${event.clientY}px,0)`;
-   const target=(event.target as Element|null)?.closest('a,button,summary,[data-cursor]');
+   const eventTarget=event.target as Element|null;
+   const target=eventTarget?.closest('a,button,summary,[data-cursor]');
    cursor.dataset.active=target?'true':'false';
+   const rgb=getBackgroundRgb(eventTarget);
+   cursor.dataset.tone=cursorToneFromRgb(rgb.r,rgb.g,rgb.b);
   };
   const down=()=>cursor.dataset.pressed='true';
   const up=()=>cursor.dataset.pressed='false';
@@ -23,5 +42,5 @@ export default function CreativeCursor(){
    window.removeEventListener('pointerup',up);
   };
  },[]);
- return <div ref={ref} className="creative-cursor" aria-hidden="true"><span/><i/><b/></div>;
+ return <div ref={ref} className="creative-cursor" data-tone="light" aria-hidden="true"><span/><i/><b/></div>;
 }
