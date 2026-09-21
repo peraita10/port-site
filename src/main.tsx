@@ -9,5 +9,6 @@ import'./styles/refinements.css';
 import'./styles/capabilities-trail.css';
 import'./styles/mobile-fixes.css';
 import'./styles/investment-proposal-a.css';
+import'./styles/cover-ribbon.css';
 
 createRoot(document.getElementById('root')!).render(<StrictMode><App/></StrictMode>);
