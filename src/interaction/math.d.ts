@@ -5,3 +5,4 @@ export function selectStage(progress:number,count:number):number;
 export function coverTransform(progress:number):{scale:number;y:number;radius:number};
 export function processScrollOffset(index:number,count:number,travel:number):number;
 export function appendTrailPoint(points:TrailPoint[],point:TrailPoint,limit?:number):TrailPoint[];
+export function cursorToneFromRgb(r:number,g:number,b:number):'dark'|'light';
