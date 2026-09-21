@@ -8,5 +8,6 @@ import'./styles/sections.css';
 import'./styles/refinements.css';
 import'./styles/capabilities-trail.css';
 import'./styles/mobile-fixes.css';
+import'./styles/investment-proposal-a.css';
 
 createRoot(document.getElementById('root')!).render(<StrictMode><App/></StrictMode>);
