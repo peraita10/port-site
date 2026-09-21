@@ -1,0 +1,63 @@
+.investment-payment-band{
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-top:1px solid #aaa499;
+  border-bottom:1px solid #aaa499;
+}
+.investment-payment-item{
+  min-height:150px;
+  padding:22px clamp(18px,4vw,62px) 28px;
+  display:grid;
+  grid-template-columns:64px 1fr;
+  align-items:end;
+}
+.investment-payment-item:first-child{border-right:1px solid #aaa499}
+.investment-payment-item>span{
+  align-self:start;
+  font-size:11px;
+  letter-spacing:.1em;
+}
+.investment-payment-item>div{
+  display:flex;
+  align-items:baseline;
+  gap:24px;
+}
+.investment-payment-item strong{
+  font:500 clamp(54px,6vw,96px)/.9 var(--display);
+  letter-spacing:-.06em;
+}
+.investment-payment-item p{
+  margin:0;
+  font-size:13px;
+  letter-spacing:.08em;
+}
+.investment-support-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  min-height:92px;
+  border-bottom:1px solid #aaa499;
+}
+.investment-support-row p{
+  margin:0;
+  padding:0 clamp(18px,2.8vw,42px);
+  font-size:11px;
+  letter-spacing:.12em;
+}
+.investment-support-row p:first-child{border-right:1px solid #aaa499}
+.investment-support-row p:last-child{text-align:right}
+.investment-support-row strong{font-weight:600}
+.investment-stage .investment-terms{margin-top:22px}
+
+@media(max-width:760px){
+  .investment-payment-band{grid-template-columns:1fr}
+  .investment-payment-item{grid-template-columns:46px 1fr;min-height:126px;padding:18px 0 22px}
+  .investment-payment-item:first-child{border-right:0;border-bottom:1px solid #aaa499}
+  .investment-payment-item>div{gap:14px}
+  .investment-payment-item strong{font-size:15vw}
+  .investment-payment-item p{font-size:11px}
+  .investment-support-row{grid-template-columns:1fr}
+  .investment-support-row p{padding:18px 0;text-align:left!important}
+  .investment-support-row p:first-child{border-right:0;border-bottom:1px solid #aaa499}
+}
