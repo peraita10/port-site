@@ -1,6 +1,10 @@
 .cover-ribbon{
-  position:relative;
-  margin-top:46px;
+  position:absolute;
+  left:var(--gutter);
+  right:var(--gutter);
+  top:36vh;
+  z-index:1;
+  margin:0;
   overflow:hidden;
   border-top:1px solid #8f8a83;
   border-bottom:1px solid #8f8a83;
@@ -31,13 +35,20 @@
   opacity:.7;
 }
 .cover-ribbon:hover{border-color:#6d6862}
-.cover-sticky .cover-field{top:42vh}
+.cover-sticky .cover-field{
+  top:30vh;
+  z-index:2;
+}
 
 @media(max-width:760px){
-  .cover-ribbon{margin-top:30px}
+  .cover-ribbon{
+    left:var(--gutter);
+    right:var(--gutter);
+    top:34vh;
+  }
   .cover-ribbon-track{padding:14px 0}
   .cover-ribbon-item{padding:0 22px;font-size:10px}
-  .cover-sticky .cover-field{top:40vh}
+  .cover-sticky .cover-field{top:29vh}
 }
 
 @media(prefers-reduced-motion:reduce){
