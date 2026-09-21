@@ -20,3 +20,9 @@ export const appendTrailPoint=(points,point,limit=16)=>{
   const size=Math.max(1,Math.floor(limit));
   return [...points,point].slice(-size);
 };
+
+export const cursorToneFromRgb=(r,g,b)=>{
+  const linear=value=>{const channel=clamp01(value/255);return channel<=.03928?channel/12.92:((channel+.055)/1.055)**2.4};
+  const luminance=.2126*linear(r)+.7152*linear(g)+.0722*linear(b);
+  return luminance>.42?'dark':'light';
+};
