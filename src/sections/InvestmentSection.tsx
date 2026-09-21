@@ -15,7 +15,7 @@ export default function InvestmentSection({offer}:Props){
    </div>
    <div className="investment-payment-item">
     <span>02 /</span>
-    <div><strong>50%</strong><p>BEFORE LAUNCH</p></div>
+    <div><strong>50%</strong><p>TO LAUNCH</p></div>
    </div>
   </div>
 
