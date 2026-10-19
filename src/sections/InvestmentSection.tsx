@@ -20,11 +20,11 @@ export default function InvestmentSection({offer}:Props){
   </div>
 
   <div className="investment-support-row investment-scope-breakdown">
-   <p>WEB / <strong>$${money(offer.webFee)}</strong></p>
-   <p>IDENTITY / <strong>$${money(offer.identityFee)}</strong></p>
+   <p>WEB / <strong>${money(offer.webFee)}</strong></p>
+   <p>IDENTITY / <strong>${money(offer.identityFee)}</strong></p>
   </div>
 
-  <p className="investment-maintenance">OPTIONAL SUPPORT / <strong>$${money(offer.maintenance)}</strong> / YEAR</p>
+  <p className="investment-maintenance">OPTIONAL SUPPORT / <strong>${money(offer.maintenance)}</strong> / YEAR</p>
 
   <details className="investment-terms"><summary>Practical details <span>+</span></summary><p>Page count and functionality are agreed once content and priorities are defined. Third-party costs, larger redesigns, new functionality and substantial content additions are quoted separately.</p></details>
  </section>;
