@@ -1,7 +1,7 @@
 import{useEffect,useRef,type RefObject}from'react';
 
 type Props={open:boolean;onClose:()=>void;triggerRef:RefObject<HTMLButtonElement|null>};
-const links=[['01','Studio','#manifesto'],['02','Capabilities','#capabilities'],['03','Offer','#offer'],['04','Process','#process'],['05','Investment','#investment'],['06','Contact','#contact']];
+const links=[['01','Studio','#manifesto'],['02','Capabilities','#capabilities'],['03','Scope','#offer'],['04','Process','#process'],['05','Investment','#investment'],['06','Contact','#contact']];
 
 export default function SiteIndex({open,onClose,triggerRef}:Props){
  const panelRef=useRef<HTMLDivElement>(null);

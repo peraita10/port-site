@@ -58,3 +58,17 @@
   .investment-support-row p{padding:18px 0;text-align:left!important}
   .investment-support-row p:first-child{border-bottom:1px solid #aaa499}
 }
+
+.investment-scope-breakdown p:first-child{border-right:1px solid #aaa499}
+.investment-maintenance{
+  margin:0;
+  padding:18px 0 0;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-align:right;
+}
+.investment-maintenance strong{font-weight:600}
+@media(max-width:760px){
+  .investment-scope-breakdown p:first-child{border-right:0}
+  .investment-maintenance{text-align:left}
+}

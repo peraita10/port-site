@@ -1,5 +1,5 @@
 export const offer = {
- currency:'USD', fee:9000, maintenance:1500, weeks:4,
+ currency:'USD', fee:15000, webFee:9000, identityFee:6000, maintenance:1500, weeks:4,
  scope:[
  ['Discovery & direction','A clear starting point.','Kick-off, references, positioning, audience and goals. Together we define what your website needs to communicate.'],
  ['Information architecture','Everything in its right place.','Sitemap and content hierarchy for a focused portfolio. Typically Home, About, Work / Projects, Services and Contact; the final page count follows your content and priorities.'],
